@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"] - Voting App</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Voting Portal</a>
+    </nav>
+
+    <div class="container">
+        @* --- THIS IS THE LAYOUT RENDERBODY --- *@
+        @* This is the "hole" where the Index or Result views will be injected *@
+        @RenderBody()
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2026 - Voting Management System</p>
+    </footer>
+</body>
+</html>
