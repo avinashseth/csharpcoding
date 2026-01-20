@@ -1,0 +1,38 @@
+@* --- THIS IS THE RAZOR VIEW ENGINE --- *@
+@* The '@model' directive tells Razor what kind of data we are receiving *@
+@model MVCExample.Models.User
+
+@{
+    // --- THIS IS THE LAYOUT REFERENCE ---
+    // This tells ASP.NET to wrap this content inside the 'Master Template' (_Layout.cshtml)
+    Layout = "_Layout";
+    ViewData["Title"] = "Voting Result";
+}
+
+<div class="container mt-5">
+    @* Razor allows us to print C# variables directly into HTML using '@' *@
+    <h2>Result for @Model.Name</h2>
+
+    @* --- RAZOR LOGIC --- *@
+    @* We can use C# if-statements to change the UI dynamically *@
+    @if (Model.CanVote)
+    {
+        <div class="alert alert-success">
+            You are @Model.Age years old. You can vote!
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            You are only @Model.Age. You are not eligible yet.
+        </div>
+    }
+
+    <hr />
+
+    @* --- THIS IS A PARTIAL VIEW --- *@
+    @* We call a small, reusable component stored in another file (_VoterTips.cshtml) *@
+    <partial name="_VoterTips" />
+
+    <a asp-action="Index" class="btn btn-primary">Try Again</a>
+</div>
