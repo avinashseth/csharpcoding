@@ -4,3 +4,8 @@ create table students (
     student_email nvarchar(255) null,
     student_mobile varchar(15) not null
 );
+
+/* insert data */
+insert into students (id, student_name, student_mobile) values (1,'Avinash Seth', '9876543210');
+go
+/* insert data */
