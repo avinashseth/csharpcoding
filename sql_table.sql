@@ -22,3 +22,5 @@ go
 delete from students where id = 2;
 go
 **************************************************
+dotnet add package Microsoft.Data.SqlClient
+**************************************************
