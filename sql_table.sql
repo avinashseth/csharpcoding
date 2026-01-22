@@ -24,3 +24,10 @@ go
 **************************************************
 dotnet add package Microsoft.Data.SqlClient
 **************************************************
+create table students2 (
+    Id int not null primary key,
+    Name nvarchar(100) not null,
+    Email nvarchar(255) null,
+    Mobile varchar(15) not null
+);
+**************************************************
