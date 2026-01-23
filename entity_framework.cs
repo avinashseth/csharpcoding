@@ -15,3 +15,20 @@ dotnet ef migrations add InitialCreate
 dotnet ef database update
 *************************************
 
+
+*************************************
+Add following packages
+*************************************
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore
+*************************************
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+*************************************
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+*************************************
+Run Following Commands
+*************************************
+dotnet ef migrations add Init
+*************************************
+dotnet ef database update
+*************************************
+
