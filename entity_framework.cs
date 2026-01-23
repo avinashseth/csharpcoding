@@ -17,7 +17,7 @@ dotnet ef database update
 
 
 *************************************
-Add following packages
+Add following packages For Auth Application
 *************************************
 dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore
 *************************************
